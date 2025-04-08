@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conditional Total Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      margin: 10px;
+    }
+  </style>
+  
+</head>
+<body>
+  <br><img src="https://sc04.alicdn.com/kf/U6a335a5d7dc94f99af4d85b1e8b21bef2/141938458/U6a335a5d7dc94f99af4d85b1e8b21bef2.jpg" alt="Pass App Logo" style="width:200px;height:auto;"></br>
+  <h1>Pass App Total Calculator</h1>
+  <h2><input type="number" id="km" placeholder="Enter distance in km"></h2>
+  <button onclick="calculateTotal()"><h1>Calculate Total</h1></button>
+  
+  <h2 id="result">Result will appear here</h2>
+  
+  <script>
+    function calculateTotal() {
+      const x = 3000;
+      const ratePerKm = 1200;
+      const km = parseFloat(document.getElementById('km').value);
+      
+      let total;
+      if (km < 1) {
+        total = x;
+      } else {
+        total = x + ((km-1) * ratePerKm);
+      }
+      document.getElementById('result').innerText = `Total: ${total}`;
+    }
+  </script>
+  <h1><a href="index.html">Back to home</a></h1>
+</body>
+</html>
